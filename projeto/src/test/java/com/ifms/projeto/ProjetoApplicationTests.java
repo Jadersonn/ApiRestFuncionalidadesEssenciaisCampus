@@ -9,5 +9,6 @@ class ProjetoApplicationTests {
 
 	@Test
 	void contextLoads() {
+		SpringApplication.run(ProjetoApplication.class);
 	}
 }
