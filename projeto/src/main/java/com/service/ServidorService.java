@@ -1,4 +1,6 @@
+package com.service;
 import com.ifms.projeto.models.Servidor;
+import com.ifms.projeto.repositories.ServidorRepository;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +28,7 @@ public class ServidorService {
                     continue; // skip header
                 }
                 Servidor servidor = new Servidor();
-                servidor.setNome(row.getCell(0).getStringCellValue());
+                servidor.setNome_servidor(row.getCell(0).getStringCellValue());
                 // Continue setando outros campos do Servidor conforme o layout do arquivo
                 servidorRepository.save(servidor);
             }
